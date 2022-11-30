@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(45deg, #1e1724, #221420);
+    height: 100vh;
+    color: $main-color;
+
+    font-size: $main-font-size;
+    font-family: $main-font-face;
+}
+
+main {
+    padding: 20px;
+
+    h2 { 
+        text-transform: uppercase;
+        color: white;
+        font-size: 5em;
+        margin-bottom: 0.8em;
+    }
+
+    h3 { 
+        text-transform: uppercase;
+        color: white;
+        font-size: 3em;
+        margin-bottom: 0.8em;
+    }
+
+    hr {  
+        border: 1px solid $heading-color; 
+        margin: 40px 0; 
+    }
+
+    p { 
+        font-size: 2em;
+    }
+}
+
+.header {
+display: flex;
+align-content: center;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+
+}
+
+.gradient {
+    background: linear-gradient(30deg, #fb5c2c, #a03ce7);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+.gradientText {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.borderGradient {
+    border-left: 3px solid #a03ce7;
+    border-right: 3px solid #fb5c2c;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 25%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.error { border: 4px solid red; }

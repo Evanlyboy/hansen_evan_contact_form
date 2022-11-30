@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail Ref</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="app">
+        <h1 class="hidden">Mail Reference for API Processing</h1>
+
+        <header class="header">
+        <h2 class="gradient gradientText">Contact me</h2>
+        <p>
+            Ever wanted to get in touch with me personally? Now you can with my genuine email contact form!
+        </p>
+
+        </header>
+
+        <hr class="separator">
+
+        <section class="form">
+            <h2 class="hidden">Contact Form</h2>
+            <h3 class="mail-header gradient gradientText">It's right here!</h3>
+            <div class="borderGradient">
+                <!-- This is where the goddamn send form is -->
+                <form  action="includes/mail/send.php" method="POST" id="mail-form">
+                    <label for="firstname">First Name</label>
+                    <input ref="fname" type="text" id="firstname" name="firstname" required="required">
+
+                    <label for="lastname">Last Name</label>
+                    <input ref="lname" type="text" id="lastname" name="lastname" required>
+
+                    <label for="firstname">Email</label>
+                    <input ref="email" type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea ref="message" name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <label for="phone">Your Phone # <i>(optional)</i></label>
+                    <input ref="phone" type="tel" value="tel" name="phone">
+
+                    <div ref="statusMessage" class="statusMessage mail-header gradientText hidden">
+                        <h4>binga booga</h4>
+                    </div>
+                    
+                    <div class="wrapper">
+                        <input @click.prevent="processMail" type="submit" class="submit" value="Go!">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>            
+                </form>
+            </div> 
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js" type="module" defer></script>
+</body>
+</html>
